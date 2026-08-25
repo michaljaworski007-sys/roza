@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Róża ❤️</title>
+<style>
+:root{--bg:#060506;--ink:#fffafa;--muted:#cbbdc2;--pink:#ff4f7a;--line:rgba(255,255,255,.16)}
+*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}.app{min-height:100svh;max-width:700px;margin:auto;padding:0 24px 70px}.screen{display:none;min-height:100svh;padding:68px 0 42px;align-items:center}.screen.active{display:flex;animation:fade .7s ease}.content{width:100%}@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.eyebrow{font-size:.74rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);margin-bottom:18px}.name{font-family:Georgia,serif;font-size:clamp(4rem,18vw,7rem);letter-spacing:-.08em;line-height:.85;margin:0 0 22px}.title{font-family:Georgia,serif;font-size:clamp(2.4rem,11vw,4.7rem);line-height:.98;letter-spacing:-.055em;margin:0 0 28px}.big{font-family:Georgia,serif;font-size:clamp(1.42rem,6vw,2rem);line-height:1.35;margin:0}.text{font-size:1.12rem;margin:0 0 18px}.muted{color:var(--muted)}.strong{font-weight:800;color:#fff}.line{height:1px;background:var(--line);margin:30px 0}.quote{border-left:3px solid var(--pink);padding:10px 0 10px 18px;margin:25px 0;font-size:1.23rem;line-height:1.45;font-style:italic;color:#ffe2e9}.button{margin-top:24px;background:#fff;color:#111;border:0;border-radius:999px;padding:14px 21px;font-size:1rem;font-weight:800;cursor:pointer}.button.pink{background:linear-gradient(135deg,#ff5c88,#a2103c);color:#fff}.button:active{transform:scale(.98)}.tiny{font-size:.9rem;color:var(--muted);margin-top:16px}
+.step{display:none}.step.show{display:block;animation:fade .55s ease}.place{font-size:1.24rem;font-weight:800;padding:18px 0;border-bottom:1px solid var(--line)}.place:last-of-type{border-bottom:0}.place span{color:var(--pink);display:inline-block;width:30px}.route{text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:30px 0;padding:23px 10px;font-size:1.22rem;font-weight:800}.photo-area{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0}.photo{height:180px;border-radius:16px;background:linear-gradient(145deg,#1e1519,#0e0a0c);border:1px dashed #76646b;color:#b9a8ae;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;font-size:.78rem;font-weight:700}.photo.wide{grid-column:1 / -1;height:150px}.card{padding:20px;border:1px solid var(--line);background:#110d0f;border-radius:16px;margin:12px 0}.card h3{margin:0 0 8px;font-size:1.13rem}.card p{margin:0;color:var(--muted)}.secret{width:100%;padding:21px;border:1px solid var(--line);border-radius:16px;background:#120e10;color:#fff;font-size:1.2rem;font-weight:800;cursor:pointer}.secret-answer{display:none;text-align:center;color:#ffdbe4;font-style:italic;padding:18px 8px}.secret-answer.show{display:block;animation:fade .4s ease}.letter{font-family:Georgia,serif;font-size:1.15rem;line-height:1.75;padding:24px;border-left:2px solid var(--pink);background:#100b0d}.video{border:1px dashed #756168;border-radius:20px;padding:38px 22px;text-align:center;background:#0d090b}.video b{font-size:1.2rem;display:block;margin-bottom:8px}.gift{display:none;margin-top:26px;border-radius:20px;padding:25px;background:linear-gradient(135deg,#db2b5e,#641028);text-align:left}.gift.show{display:block;animation:fade .6s ease}.end{text-align:center}.end .title{font-size:clamp(3rem,14vw,5.5rem)}
+</style>
+</head>
+<body>
+<main class="app">
+
+<section class="screen active" id="s1">
+  <div class="content">
+    <div class="eyebrow">30 sierpnia · tylko dla Ciebie</div>
+    <h1 class="name">Róża ❤️</h1>
+    <p class="big">To nie jest zwykły prezent.</p>
+    <p class="text muted" style="margin-top:18px">Nie mogę być dzisiaj obok Ciebie tak, jak bym chciał. Więc zostawiłem Ci tutaj kawałek mnie.</p>
+    <button class="button pink" onclick="go('s2')">Zacznij ❤️</button>
+  </div>
+</section>
+
+<section class="screen" id="s2">
+  <div class="content">
+    <div class="eyebrow">Początek</div>
+    <p class="big">Dwa lata temu przesunęłaś palcem w prawo.</p>
+    <div class="quote">I kompletnie nie wiedzieliśmy jeszcze, co właśnie zaczynamy.</div>
+    <button class="button" onclick="go('s3')">Dalej</button>
+  </div>
+</section>
+
+<section class="screen" id="s3">
+  <div class="content">
+    <div class="eyebrow">Rozdział 1</div>
+    <h2 class="title">Żabka na Podleśnej.</h2>
+    <p class="text">Spotkaliśmy się przy Żabce na Podleśnej. Potem stwierdziliśmy, że jedziemy do centrum napić się czegoś alkoholowego.</p>
+    <p class="text">Nie mieliśmy jakiegoś wielkiego planu. Po prostu byliśmy razem i sprawdzaliśmy, gdzie zaprowadzi nas wieczór.</p>
+    <button class="button" onclick="reveal('meet1')">Co było dalej?</button>
+    <div class="step" id="meet1">
+      <div class="line"></div>
+      <div class="place"><span>01</span> Centrum Warszawy</div>
+      <div class="place"><span>02</span> Jedna knajpa</div>
+      <div class="place"><span>03</span> Druga knajpa</div>
+      <div class="place"><span>04</span> Irlandzki pub na Nowym Mieście</div>
+      <p class="text" style="margin-top:28px">Chodziliśmy od knajpy do knajpy, aż w końcu trafiliśmy właśnie tam.</p>
+      <button class="button pink" onclick="go('s4')">Dalej</button>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="s4">
+  <div class="content">
+    <div class="eyebrow">Ten moment</div>
+    <p class="big">Miałem Cię odwieźć do domu.</p>
+    <p class="text muted">Taki był plan.</p>
+    <button class="button" onclick="reveal('stay')">I co się stało?</button>
+    <div class="step" id="stay">
+      <div class="line"></div>
+      <div class="quote">„Zostaniesz ze mną na noc?”</div>
+      <p class="text strong">I zostałem.</p>
+      <p class="text">Myślę, że właśnie wtedy zaczęła się nasza historia.</p>
+      <button class="button pink" onclick="go('s5')">Dalej</button>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="s5">
+  <div class="content">
+    <div class="eyebrow">Pierwsze wrażenie</div>
+    <h2 class="title">Od razu mi się spodobałaś.</h2>
+    <p class="text">Byłaś uśmiechnięta, otwarta na propozycje i po prostu dobrze mi się z Tobą rozmawiało.</p>
+    <p class="text">Nie będę udawał. Od razu pomyślałem, że jesteś bardzo ładna.</p>
+    <p class="text">Gadaliśmy chwilę o tym, czym się zajmujemy, ale szybko okazało się, że nie chcesz spędzać naszego pierwszego spotkania na rozmowach o pracy.</p>
+    <p class="text">I całe szczęście. Zamiast rozmowy kwalifikacyjnej, po prostu spędzaliśmy razem czas.</p>
+    <p class="text muted">Wydaje mi się, że ja zrobiłem pierwszy krok. Szczerze mówiąc, nie jestem pewien. Wiem tylko, że żadne z nas nie chciało wtedy kończyć tego wieczoru.</p>
+    <button class="button pink" onclick="go('s6')">Dalej</button>
+  </div>
+</section>
+
+<section class="screen" id="s6">
+  <div class="content">
+    <div class="eyebrow">Następny dzień</div>
+    <h2 class="title">Czułem niedosyt.</h2>
+    <p class="text">Nie tylko satysfakcję po fajnej nocy.</p>
+    <p class="text">Czułem niedosyt. Chciałem Cię znowu zobaczyć.</p>
+    <div class="quote">I chyba właśnie dlatego cały kolejny tydzień spędziliśmy razem.</div>
+    <button class="button pink" onclick="go('s7')">Dalej</button>
+  </div>
+</section>
+
+<section class="screen" id="s7">
+  <div class="content">
+    <div class="eyebrow">Rozdział 2</div>
+    <h2 class="title">Co dalej?</h2>
+    <p class="text">Po tym tygodniu musiałem wrócić do Irlandii.</p>
+    <p class="text">Ty zostawałaś w Polsce. Ja wracałem do swojego życia. Wiedzieliśmy, że prowadzimy dwa zupełnie różne życia i zaczęliśmy zastanawiać się, co dalej.</p>
+    <p class="text">Nie wiedzieliśmy jeszcze, czy związek na odległość ma sens. Nie wiedzieliśmy, czy to się uda.</p>
+    <button class="button" onclick="reveal('ticket')">Co zrobiłem po powrocie?</button>
+    <div class="step" id="ticket">
+      <div class="route">🇮🇪 &nbsp; Irlandia &nbsp; ♥ &nbsp; Polska &nbsp; 🇵🇱</div>
+      <p class="text strong">Od razu kupiłem bilet do Polski na następny wolny weekend, jaki miałem.</p>
+      <p class="text">Nie po to, żeby mieć kolejną fajną randkę. Chciałem zobaczyć, czy naprawdę chcemy być razem.</p>
+      <button class="button pink" onclick="go('s8')">Dalej</button>
+    </div>
+  </div>
+</section>
+
+<section class="screen" id="s8">
+  <div class="content">
+    <div class="eyebrow">Nasza decyzja</div>
+    <h2 class="title">Chcieliśmy spróbować.</h2>
+    <p class="text">Wtedy uświadomiliśmy sobie, że chcemy być razem. Mimo tego, że prowadzimy dwa zupełnie różne życia.</p>
+    <p class="text">Mimo Polski i Irlandii. Mimo kilometrów. Mimo tęsknoty.</p>
+    <div class="quote">Bo od początku było w tym coś, czego żadne z nas nie chciało po prostu odpuścić.</div>
+    <button class="button pink" onclick="go('s9')">Zobacz nasze chwile</button>
+  </div>
+</section>
+
+<section class="screen" id="s9">
+  <div class="content">
+    <div class="eyebrow">Wspomnienia</div>
+    <h2 class="title">Wszystkie są najlepsze.</h2>
+    <p class="text">Nie mamy jednego najlepszego wspomnienia. Z Tobą nawet zwykłe chwile stają się tymi, które chcę pamiętać najdłużej.</p>
+    <div class="photo-area">
+      <div class="photo">TU DODASZ PIERWSZE ZDJĘCIE</div>
+      <div class="photo">TU DODASZ DRUGIE ZDJĘCIE</div>
+      <div class="photo">TU DODASZ TRZECIE ZDJĘCIE</div>
+      <div class="photo">TU DODASZ CZWARTE ZDJĘCIE</div>
+      <div class="photo wide">TU DODASZ WASZE ULUBIONE WSPÓLNE ZDJĘCIE</div>
+    </div>
+    <p class="tiny">Te miejsca później podmienimy na Wasze prawdziwe zdjęcia.</p>
+    <button class="button pink" onclick="go('s10')">Jest jeszcze coś</button>
+  </div>
+</section>
+
+<section class="screen" id="s10">
+  <div class="content">
+    <div class="eyebrow">Tylko my to rozumiemy</div>
+    <h2 class="title">JEBABLE. 😂</h2>
+    <button class="secret" onclick="document.getElementById('secret').classList.toggle('show')">Kliknij, jeśli wiesz</button>
+    <div class="secret-answer" id="secret">Jeżeli wiesz, to wiesz. I niech tak zostanie. ❤️</div>
+    <button class="button pink" onclick="go('s11')">Dalej</button>
+  </div>
+</section>
+
+<section class="screen" id="s11">
+  <div class="content">
+    <div class="eyebrow">Nasz soundtrack</div>
+    <h2 class="title">Gdyby nasza historia miała piosenki.</h2>
+    <div class="card"><h3>🎵 [Piosenka 1]</h3><p>Tu wpiszesz, dlaczego ta piosenka jest Wasza.</p></div>
+    <div class="card"><h3>🎵 [Piosenka 2]</h3><p>Tu wpiszesz wspomnienie, które zawsze wraca z tą piosenką.</p></div>
+    <div class="card"><h3>🎵 [Piosenka 3]</h3><p>Tu możesz później wkleić link do Spotify albo YouTube.</p></div>
+    <button class="button pink" onclick="go('s12')">Dalej</button>
+  </div>
+</section>
+
+<section class="screen" id="s12">
+  <div class="content">
+    <div class="eyebrow">Prawda</div>
+    <h2 class="title">Co w Tobie kocham?</h2>
+    <div class="letter">
+      <p>Mógłbym wymienić tysiąc rzeczy, które w Tobie kocham.</p>
+      <p>Ale prawda jest prostsza.</p>
+      <p><strong>Kocham w Tobie wszystko.</strong></p>
+      <p>Twój uśmiech. To, że jesteś otwarta. To, jak zwykłe chwile przy Tobie stają się ważne. To, że nawet kiedy jesteśmy daleko, ciągle czuję, że jesteś częścią mojego życia.</p>
+      <p>Najbardziej kocham chyba to, że od tamtej pierwszej nocy ciągle chcę mieć z Tobą więcej czasu.</p>
+    </div>
+    <button class="button pink" onclick="go('s13')">Jeszcze jedno</button>
+  </div>
+</section>
+
+<section class="screen" id="s13">
+  <div class="content">
+    <div class="eyebrow">Film ode mnie</div>
+    <h2 class="title">Teraz posłuchaj mnie.</h2>
+    <div class="video"><b>🎬 Tu dodasz swój film dla Róży</b><span class="muted">Nagraj dla niej krótką wiadomość. Powiedz jej własnymi słowami to, czego nie da się zastąpić tekstem.</span></div>
+    <button class="button pink" onclick="go('s14')">Ostatnia rzecz</button>
+  </div>
+</section>
+
+<section class="screen" id="s14">
+  <div class="content end">
+    <div class="eyebrow">Finał</div>
+    <h2 class="title">Róża…</h2>
+    <p class="big">Myślałaś, że to już koniec?</p>
+    <p class="big" style="margin-top:24px">Nie.</p>
+    <p class="big">Bo nasza historia dopiero się zaczyna. ❤️</p>
+    <button class="button pink" onclick="document.getElementById('gift').classList.add('show')">Odbierz swoją niespodziankę 🎁</button>
+    <div class="gift" id="gift"><strong>Tu wpisz prawdziwą niespodziankę.</strong><p style="margin:10px 0 0">Na przykład: nasz następny weekend razem, wyjazd, kolację albo coś, co zaplanowałeś tylko dla Was.</p></div>
+  </div>
+</section>
+</main>
+<script>
+function go(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}
+function reveal(id){document.getElementById(id).classList.add('show');}
+</script>
+</body>
+</html>
